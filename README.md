@@ -20,11 +20,16 @@
 
 ![Image of Assessment questions page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Assessment%20questions%20sample.png)
 
+![Image of Assessment questions page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Assessment1.jpeg)
+
+
 ## Video Component
 
 ![Image of Video Page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video.png)
 
 ![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video%20Page.png)
+
+![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video1.jpeg)
 
 ## DB.JSON File Samples:
  ```
