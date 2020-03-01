@@ -2,7 +2,7 @@
 
 ## TEAM 3:
  1. Sai Sampath Kumar Raigiri
- 2. Amrutha Naidu
+ 2. Amruta Naidu
  3. Akhila Pericherla
 
 ## Project Responsibilities:
