@@ -26,9 +26,6 @@
 
 ![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video%20Page.png)
 
-## Need to be Decided:
-- Template Form or Reactive Form
-
 ## DB.JSON File Samples:
  ```
  {
@@ -131,3 +128,6 @@
 ```
 
 
+
+## Need to be Decided:
+- Template Form or Reactive Form
