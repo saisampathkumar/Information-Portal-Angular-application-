@@ -24,7 +24,7 @@
 
 ![Image of Video Page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video.png)
 
-![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video.png)
+![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video%20Page.png)
 
 ## Need to be Decided:
 - Template Form or Reactive Form
