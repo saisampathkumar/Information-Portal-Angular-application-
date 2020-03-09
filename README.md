@@ -1,138 +1,28 @@
-# Virtusa_Training_Project: Online Information Protal
+# InfoPortal
+# 3/2/2020..9
 
-## TEAM 3:
- 1. Sai Sampath Kumar Raigiri
- 2. Amruta Naidu
- 3. Akhila Pericherla
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
-## Project Responsibilities:
- 1. Assessments Module
- 2. Video Content Module
+## Development server
 
-## Required Stuff:
- 1. Reset.css
- 2. Db.Json
- 3. Scss files  
-  
-## Assessment Component
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-![Image of Assessment Page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Assessment.png)
+## Code scaffolding
 
-![Image of Assessment questions page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Assessment%20questions%20sample.png)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-![Image of Assessment questions page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Assessment1.jpeg)
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Video Component
+## Running unit tests
 
-![Image of Video Page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video.png)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video%20Page.png)
+## Running end-to-end tests
 
-![Image of Video playing page](https://github.com/saisampathkumar/Virtusa_Training_Project/blob/master/Video1.jpeg)
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## DB.JSON File Samples:
- ```
- {
-    "assessment": [{ }],
-    "video": [{ }],
-    "Articles":[{ }],
-    "Links":[{ }],
-    "Accounts":[{ }],
-    "Flash Cards":[{ }]
-}
-```
+## Further help
 
-## DB.JSON File including sample Assessment and Video Component Data:
-
-```
-{
-    "assessment": [
-        { "angular": [
-            { "q1": "Question 1" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "q2": "Question 2" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]}, 
-            { "q3": "Question 3" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "ans": ["ans1", "ans2", "ans3"] }
-        ] },
-        { "node": [
-            { "q1": "Question 1" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "q2": "Question 2" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ] },
-            { "q3": "Question 3" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "ans": ["ans1", "ans2", "ans3"] }
-        ] },
-        { "javascript": [
-            { "q1": "Question 1" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "q2": "Question 2" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "q3": "Question 3" , "options" : [
-                {"o1" : "option1"},
-                {"o2" : "option2"},
-                {"o3" : "option3"},
-                {"o4" : "option4"}
-                ]},
-            { "ans": ["ans1", "ans2", "ans3"] }
-        ] }
-    ],
-    "video": [
-        { "angular": [
-            { "id": 1, "title": "Introduction", "url": "https://youtu.be/0eWrpsCLMJQ" },
-            { "id": 2, "title": "Components", "url": "https://youtu.be/16rQyEQtpyQ" },
-            { "id": 3, "title": "Interpolation", "url": "https://youtu.be/2a6OfacW_-I" }
-        ] },
-        { "node": [
-            { "id": 1, "title": "Introduction", "url": "https://youtu.be/w-7RQ46RgxU" },
-            { "id": 2, "title": "Installing Node JS", "url": "https://youtu.be/1US-P13yKVs" },
-            { "id": 3, "title": "The Global Object", "url": "https://youtu.be/PY-AycMkEAg" }
-        ] },
-        { "javascript": [
-            { "id": 1, "title": "Introduction", "url": "https://youtu.be/uDwSnnhl1Ng" },
-            { "id": 2, "title": "Variables & Data Types", "url": "https://youtu.be/Hrd3SfCCXZw" },
-            { "id": 3, "title": "Operators", "url": "https://youtu.be/ULNJSTSJc7s" }
-        ] }
-    ]
-}
-```
-
-
-
-## Need to be Decided:
-- Template Form or Reactive Form
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
