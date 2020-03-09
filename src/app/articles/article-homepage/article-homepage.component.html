@@ -1,0 +1,36 @@
+<!-- <mat-toolbar class="navbar">
+  <span class="gap hover">Blog Homepage</span>
+  <span class="filler"></span>
+  <mat-icon aria-hidden="false" aria-label="Home icon">home</mat-icon>
+  <span class="gap hover">Home</span>
+  <mat-icon aria-hidden="false" aria-label="Search icon">search</mat-icon>
+  <span class="gap hover">Browse</span>
+  <span class="gap hover">Explore</span>
+  <span class="gap hover" [routerLink]="['/articles/add-article']">Add Article</span>
+</mat-toolbar> -->
+
+<div id="subjectDiv">
+  <mat-card
+    class="subject-card"
+    *ngFor="let subject of subjects"
+    [routerLink]="['/articles/', subject.name]"
+  >
+    <mat-card-content>
+      <h1>{{ subject.name }}</h1>
+      <img
+        mat-card-image
+        src="{{ subject.imagePath }}"
+        alt="{{ subject.name }} logo"
+      />
+    </mat-card-content>
+    <!-- <app-subject-blogpage [headerTitle]="subject.name"></app-subject-blogpage> -->
+  </mat-card>
+
+  <mat-card class="subject-card" [routerLink]="['/articles/add-article']">
+    <mat-card-content>
+      <h1>Add Article</h1>
+      <img mat-card-image src="assets/plus.png" alt="add article logo" />
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- change the styling of the desc div to centre the text in it -->

@@ -1,0 +1,32 @@
+<button mat-fab color="primary" class="fab-button" [routerLink]="['/articles',prevType]">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+<mat-card class="article-card" *ngIf="article">
+    <mat-card-title class="article-title">{{article.title}}</mat-card-title>
+    <mat-card-header>
+        <img mat-card-avatar [src]="article.author.avatar">
+        <mat-card-title>{{article.author.name}}</mat-card-title>
+        <mat-card-subtitle>{{article.publish_date | date: 'MMM dd, yyyy'}} · {{article.timeToRead}} min read
+        </mat-card-subtitle>
+    </mat-card-header>
+    <div class="cover-div">
+        <img mat-card-image class="cover-photo" [src]="article.image" alt="Cover Photo">
+    </div>
+    <mat-card-content>
+        <markdown [data]="markdownContent"></markdown>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-icon-button color="warn" aria-label="icon-button with a heart icon" *ngIf="liked" (click)="like()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="icon-button with a heart icon" *ngIf="!liked" (click)="like()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        {{article.likes}}
+        <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+    <button mat-raised-button color='primary' class="full-width assessmentButton" (click)="gotoAssessment()">Go To
+        Assessment</button>
+    <app-articlescomments></app-articlescomments>
+    <app-articlecommentsdisplay></app-articlecommentsdisplay>
+</mat-card>

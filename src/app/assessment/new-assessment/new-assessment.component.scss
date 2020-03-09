@@ -1,0 +1,52 @@
+$border-color: #d1d5da;
+
+mat-horizontal-stepper{
+  max-width: 50%;
+  margin: auto;
+  padding: 40px;
+  border: 2px solid $border-color;
+  border-radius: 5px;  
+}
+.add-article-form {
+  margin: auto;
+  padding: 10px;
+  // border: 2px solid $border-color; 
+  border-radius: 5px;
+  font-size: larger;
+  .submitButton {
+    margin-top: 20px;
+  }
+}
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 40%;
+}
+
+.fab-button {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  left: 30px;
+  top: 100px;
+}
+mat-form-field{
+  margin: 0 5px ;
+}
+h1{
+  margin: 10px 5px;
+}
+hr{
+  border: 2px solid black;
+}
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+.minheight{
+  margin-bottom: 100px;
+}

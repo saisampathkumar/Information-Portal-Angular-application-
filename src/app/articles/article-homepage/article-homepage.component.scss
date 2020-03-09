@@ -1,0 +1,168 @@
+$primary: #0b2161;
+
+.navbar {
+  background-color: $primary;
+  color: white;
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 2em;
+}
+
+#desc {
+  background-color: #f2f2f2;
+  height: 20vh;
+  text-align: center;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.example-container {
+  .nav-content {
+    width: 15vw;
+  }
+
+  .sidenav {
+    height: 100%;
+    //position: fixed;
+    z-index: 1;
+    background-color: $primary;
+    overflow-x: hidden;
+
+    & > a {
+      //padding: 6px 8px 6px 16px;
+      margin: 2em 1em;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #eff5fb;
+      display: block;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 10%;
+    .grid-container {
+      margin: 2em;
+      height: 50vh;
+      //width: 75vw;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1em;
+      padding: 1em;
+
+      & > div {
+        background-color: #bdbdbd;
+        text-align: center;
+        padding: 1em 0;
+        border-radius: 0.5em;
+        //font-size: 30px;
+      }
+
+      .item1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+  }
+}
+
+.search {
+  height: 5%;
+  text-align: center;
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > label {
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+  }
+
+  & > input {
+    width: 25vw;
+    height: 5vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.search-icon {
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
+// .example-card {
+//   width: 30vw;
+//   height: 20vh;
+//   margin: 1em;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+// .example-header-image {
+//   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+//   background-size: cover;
+// }
+
+.example-card {
+  width: 20vw;
+  margin: 1em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.example-header-image {
+  // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.subject-card {
+  width: 12vw;
+  height: 36vh;
+  margin: 1em;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+  & > h1 {
+    font-size: 2em;
+  }
+}
+
+h1 {
+  font-weight: bold;
+}
+
+#subjectDiv {
+  padding: 70px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav a {
+    font-size: 0.5rem;
+  }
+}

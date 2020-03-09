@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css?family=Slabo+27px&display=swap");
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #dddddd;
+}
+
+$minor_primary_color: #AD81C0;
+$border-color: #d1d5da;
+
+@mixin hover {
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+@mixin backButton {
+  position: fixed;
+  z-index: 9;
+  top: 10%;
+  left: 1.4%;
+}

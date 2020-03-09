@@ -1,0 +1,133 @@
+@import "../../../styles.scss";
+$border-color: #d1d5da;
+
+
+input.ngValid{
+  color: red;
+}
+.fab-button {
+  display: block;
+  position: fixed;
+  z-index: 0;
+  left: 30px;
+  top: 100px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.radio-button {
+  padding: 5px;
+  margin: 12px;
+  -ms-transform: scale(2); 
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+label{
+  width: fit-content;
+  margin: 8px;
+}
+
+* {
+  display: block;
+  margin: 0;
+}
+mat-expansion-panel {
+  margin: 20px;
+  padding: 0;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  :focus{
+    mat-expansion-panel{
+      border: 1.5px solid black;
+    }
+  }
+}
+.expansion{
+  :focus{
+    border: 1.5px solid black;
+    }
+}
+mat-card-title {
+  background-color: $minor_primary_color;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+  // width: 97.2%;
+}
+radio-group{
+  padding: 5px 10px;
+}
+
+.cards {
+  display: inline-block;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin: 20px;
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+  height: 5%;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.form {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid $border-color;
+  border-radius: 5px;
+  display: flex;
+  margin: 20px auto;
+  min-width: 50%;
+  max-width: fit-content;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+mat-expansion-panel-header{
+  background-color: white;
+  font-size: large;
+}
+.classbutton {
+  margin: 20px;
+  padding: 20px;
+  z-index: 99;
+}
+h1{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+.correct{
+  border: 2px green solid;
+  box-shadow: 1px 1px 10px green;
+}
+.wrong{
+  border: 2px red solid;
+  box-shadow: 1px 1px 10px red;
+}
+.closebutton{
+  position: fixed;
+  margin: auto;
+}
+h1{
+  margin: 50px auto;
+}
+button{
+  margin: auto;
+  // height: 50px;
+}
+.submitButton {
+  margin: 20px auto;
+  padding: 5px;
+  width: 50%;
+}
+label{
+  font-size: larger;
+}

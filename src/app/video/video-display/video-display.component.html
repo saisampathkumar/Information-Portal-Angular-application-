@@ -1,0 +1,19 @@
+<!-- Back Button -->
+<button mat-fab color="primary" class="fab-button" (click)="navBack()">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+
+<div class="wrapper">
+<h2 class="courseName">{{courseNameStr}}</h2>
+
+<!-- Videos Display -->
+<mat-list *ngIf="videoData">
+    <mat-list-item *ngFor="let x of videoData; index as i;"> 
+        <div class="mat-list-item">
+            <img width="240" [src]="'http://img.'+x.url.slice(12,23)+'/vi/'+x.url.slice(30)+'/0.jpg'" 
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope;" (click)="openDialog(x)">
+            <h3>{{x.title}}</h3>
+        </div>  
+    </mat-list-item>
+</mat-list>
+</div>

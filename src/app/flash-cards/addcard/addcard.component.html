@@ -1,0 +1,37 @@
+<button mat-fab color="primary" class="fab-button" [routerLink]="['/card']">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+<form [formGroup]='dataForm' class="add-article-form" (ngSubmit)="add_Card()">
+    <h1>Please Add Card Here</h1>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Enter the Question</mat-label>
+    <textarea styles="margin 0 auto" rows="2" cols="100" matInput formControlName='question'
+      placeholder="enter the question"></textarea>
+      <mat-error *ngIf="dataForm.controls.question.hasError('required')">
+          Please Enter the Question
+      </mat-error>
+    <br />
+  </mat-form-field>
+  <br />
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Enter the Answer</mat-label>
+    <textarea rows="5" cols="50" matInput formControlName="ans" placeholder="enter the ans"></textarea>
+    <mat-error *ngIf="dataForm.controls.ans.hasError('required')">
+        Please Enter the Answer
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+  <mat-label>Choose a Type</mat-label>
+  <mat-select formControlName='type' >
+  <mat-option *ngFor="let t of type" [value]="t">{{t}}</mat-option>
+  </mat-select>
+  <mat-error *ngIf="dataForm.controls.type.hasError('required')">
+      Please Choose a Type
+  </mat-error>
+  <br/>
+</mat-form-field>
+<mat-card-actions>
+    <button matTooltip="Check your score" matTooltipPosition="right" mat-raised-button [disabled]="dataForm.invalid" color='primary' type="submit" class="full-width submitButton">Save</button>
+  </mat-card-actions>
+
+</form>

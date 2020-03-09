@@ -1,0 +1,51 @@
+<br><br>
+<form [formGroup]="assessmentForm" class="add-article-form" (ngSubmit)="dataSubmit()">
+    <h1>Please add a question here</h1>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Course</mat-label>
+        <mat-select formControlName="course">
+            <mat-option *ngFor="let course of courses" [value]="course">
+                {{course}}
+            </mat-option>
+        </mat-select>
+
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Please enter question 1</mat-label>
+        <input formControlName="ques1" matInput placeholder="Enter question 1">
+    </mat-form-field>
+    
+    <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Option 1</mat-label>
+        <input formControlName="ques1op1" matInput placeholder="Enter Option 1">
+    </mat-form-field>
+
+    <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Option 2</mat-label>
+        <input formControlName="ques1op2" matInput placeholder="Enter Option 2">
+    </mat-form-field>
+
+    <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Option 3</mat-label>
+        <input formControlName="ques1op3" matInput placeholder="Enter Option 3">    
+    </mat-form-field>
+
+    <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Option 4</mat-label>
+        <input formControlName="ques1op4" matInput placeholder="Enter Option 4">    
+    </mat-form-field>
+
+    <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer</mat-label>
+        <mat-select formControlName="ques1Ans">
+            <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer" [value]="Answer">
+                {{Answer}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button [disabled]="assessmentForm.invalid" matTooltip="Check your score" matTooltipPosition="right" mat-raised-button color='primary' type="submit" class="full-width submitButton" >Submit</button>
+</form>
+<br><br><br>
+<br><br><br><br><br>
+<br><br>

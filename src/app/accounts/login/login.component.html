@@ -1,0 +1,80 @@
+<div class="wrapper" style="height: auto;">
+  <mat-card class="login-card" style="top: 41vh;">
+    <mat-card-header>
+      <mat-card-title>
+        <i class="material-icons">
+          person_outline &nbsp;&nbsp;
+        </i>
+        <span>Log In</span>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="login-form" [formGroup]="myForm">
+        <!-- Username -->
+        <div class="field">
+          <i class="material-icons">
+            account_circle &nbsp; &nbsp;
+          </i>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Enter your username" formControlName='userName'>
+            <small class="invalid" *ngIf="isUserNameValid === false">
+              Please fill in username
+            </small>
+          </mat-form-field>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <i class="material-icons">
+            email &nbsp; &nbsp;
+          </i>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="Enter your email"
+                   formControlName="email"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <small class="invalid" *ngIf="isEmailValid === false">
+              <br>Fill in email in correct format
+            </small>
+          </mat-form-field>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+          <i class="material-icons">
+            lock &nbsp; &nbsp;
+          </i>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password"
+                   formControlName="passWord"
+                   placeholder="Enter your password">
+            <small class="invalid" *ngIf="isPassWordValid === false">
+              <br>Please fill in password
+            </small>
+          </mat-form-field>
+        </div>
+
+      </form>
+    </mat-card-content>
+
+    <!-- For message after hitting log in button -->
+    <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
+      <i class="material-icons" *ngIf="hasErrors">
+        close &nbsp;&nbsp;
+      </i>
+      <i class="material-icons" *ngIf="hasErrors === false">
+        check &nbsp;&nbsp;
+      </i>
+      {{ message }}
+    </span>
+
+    <mat-card-actions>
+      <button mat-raised-button color='primary' (click)="onLogIn()">Log in</button>
+    </mat-card-actions>
+
+    <div>Don't have account? <a [routerLink]="['/signUp']">Register</a></div>
+  </mat-card>
+</div>

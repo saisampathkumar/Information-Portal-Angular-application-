@@ -1,0 +1,25 @@
+mat-card {
+  width: 46%;
+  height: auto;
+  margin: 0 auto;
+  top: 10vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-circle {
+  margin-bottom: 20px;
+}
+
+mat-card-header-text{
+  margin: 0 20%;
+}
+
+img {
+  width: 100px;
+  border-radius: 50%;
+}

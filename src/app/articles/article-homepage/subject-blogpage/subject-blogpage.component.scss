@@ -1,0 +1,78 @@
+$primary: #0b2161;
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 16px;
+  top: 76px;
+}
+
+button {
+  margin: 1em;
+  background-color: #585858;
+  color: white;
+}
+
+img {
+  height: 10%;
+}
+
+#desc {
+  background-color: #f2f2f2;
+  height: 20vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  margin: 0 15% 5% 15%;
+}
+
+.search {
+  height: 5%;
+  text-align: center;
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > label {
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+  }
+  & > input {
+    width: 25vw;
+    height: 5vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.example-card {
+  width: 20vw;
+  height: 50vh;
+  overflow: hidden;
+  margin: 1em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.example-header-image {
+  // background-image: url(“https://material.angular.io/assets/img/examples/shiba1.jpg”);
+  background-size: cover;
+}

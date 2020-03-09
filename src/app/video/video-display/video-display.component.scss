@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+
+.mat-list-base {
+    margin-top: 2%;
+    text-align: center;
+    .mat-list-item {
+        height: auto;
+        display: inline-block;
+        width: auto;
+        cursor: pointer;
+        .mat-list-item {
+            width: 240px;
+        }
+    }
+}
+
+.mat-fab {
+    @include backButton
+}
+
+.courseName {
+    //position: absolute;
+    top: 10%;
+    margin-left: 45%;
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.wrapper {
+    margin: 40px 20px 0 20px;
+}

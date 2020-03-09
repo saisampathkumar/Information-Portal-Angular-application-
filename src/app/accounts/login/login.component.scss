@@ -1,0 +1,64 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+mat-card.login-card {
+  margin: auto;
+  text-align: center;
+  max-width: 500px;
+  top: 50vh;
+  transform: translate(0, -50%);
+  background-color: #e9e0f3;
+}
+
+mat-card-header {
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.field, form {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+mat-card-title {
+  display: flex;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+}
+
+mat-form-field {
+  align-items: center;
+  display: flex;
+}
+
+.invalid {
+  color: red;
+}
+
+// .invalid-msg {
+//   color: #ff0000;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .valid-msg {
+//   color: #008000;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

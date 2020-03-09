@@ -1,0 +1,37 @@
+  <div class="main-div" style="height:auto">
+ß    <mat-card class="example-card" [ngStyle]="changeColorQuesAns(flashcardlist[index])">
+        <mat-card-header>
+            <mat-card-title>Card: {{index+1}} </mat-card-title>
+            <mat-card-content> </mat-card-content>
+        </mat-card-header>
+        <mat-card-content>
+            <h1 style="font-weight: bold ;font-size: 20px">{{ flashcardlist[index].question}}</h1> <br>
+            <mat-card-content *ngIf="flashcardlist[index].front">
+                Ans:
+                {{ flashcardlist[index].ans }} <br>
+                <mat-card-actions >
+                    <input type="checkbox" [checked]="flashcardlist[index].pass===true"
+                        (change)="passcard()">{{read}}
+                </mat-card-actions>
+            </mat-card-content>
+
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<mat-card-actions style=" margin-right: 0px; margin-left: 0px">
+    <button mat-button (click)="leftArrow()" (click)='flashcardlist[index].front = false'>Left</button>
+    <button mat-button *ngIf="!flashcardlist[index].front"
+        (click)='onClickQuesAns(flashcardlist[index])'>Answer</button>
+    <button mat-button *ngIf="flashcardlist[index].front" (click)='onClickQuesAns(flashcardlist[index])'>Back to
+        question</button>
+    <button mat-button (click)="rightArrow()" (click)='flashcardlist[index].front = false'>Right</button>
+  </mat-card-actions>
+  <br />
+  <mat-card-actions>
+    <div [hidden]="currentUser===undefined">
+        <button mat-button (click)=reset()>Reset</button>
+        <button mat-button (click)="deletecard(flashcardlist[index])">DELETE</button>
+    </div>
+
+</mat-card-actions>

@@ -1,0 +1,28 @@
+$border-color: #d1d5da;
+
+.add-article-form {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 25px;
+  border: 2px solid $border-color;
+  border-radius: 4px;
+  font-size: large;
+  padding-bottom: 80px;
+
+  .submitButton {
+    margin-top: 20px;
+  }
+}
+.full-width {
+  width: 100%;
+}
+
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}

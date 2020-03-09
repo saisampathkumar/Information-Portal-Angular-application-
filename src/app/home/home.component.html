@@ -1,0 +1,15 @@
+<mat-card >
+  <div class="header">
+    <mat-card-title>WELCOME TO YOUR PROFILE</mat-card-title>
+  </div>
+  <div style="margin: 13px 35%;">
+    <img src="../../assets/avatar1.png" style="width: 200px;">
+  </div>
+  <mat-card-header style="justify-content: center;">
+    <mat-card-title>{{ currentUser.firstName }} {{ currentUser.lastName }}</mat-card-title>
+    <mat-card-subtitle>{{ currentUser.userName }} | {{ currentUser.email }}</mat-card-subtitle>
+    <mat-card-subtitle>Your role: &nbsp; <span style="color: green;">{{ currentUser.userType }}</span></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+  </mat-card-content>
+</mat-card>

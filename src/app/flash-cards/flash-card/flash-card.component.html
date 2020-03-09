@@ -1,0 +1,31 @@
+
+  <div class="wrapper" >
+
+    <mat-card
+      class="subject-card"
+      *ngFor="let subject of subjects"
+      [routerLink]="['/card' , subject.uri]">
+
+      <mat-card-content>
+        <h1>{{ subject.name }}</h1>
+        <img
+          mat-card-image
+          src="{{ subject.imagePath }}"
+          alt="{{ subject.name }} logo"
+        />
+      </mat-card-content>
+    </mat-card>
+    <span [hidden]="currentUser===undefined">
+    <mat-card    [routerLink]="['/addcard']">
+        <mat-card-content>
+            <h1>Add Flashcard</h1>
+              <img
+                mat-card-image
+                src='/assets/plus.png'
+                alt="Add card"
+              />
+            </mat-card-content>
+    </mat-card>
+  </span>
+  </div>
+

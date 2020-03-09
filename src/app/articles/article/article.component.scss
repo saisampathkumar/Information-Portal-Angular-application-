@@ -1,0 +1,40 @@
+.article-card {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 80px;
+
+  .article-title {
+    margin: 40px 0;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .article-header-image {
+    background-size: cover;
+  }
+  .cover-div {
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 -16px 25px -16px;
+  }
+  .cover-photo {
+    overflow: hidden;
+    margin-top: -100px;
+  }
+  markdown {
+    p img {
+      max-width: 100% !important;
+    }
+  }
+}
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}
+.full-width {
+  width: 100%;
+}
+.assessmentButton {
+  margin-bottom: 30px;
+}

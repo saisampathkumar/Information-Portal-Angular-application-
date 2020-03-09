@@ -1,0 +1,90 @@
+@import '../../../styles.scss';
+div.ng-star-inserted {
+    display: block;
+}
+
+.wrapper {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+    div.ng-star-inserted {
+        display: inline;
+    }
+    div.form {
+        display: block;
+        margin-top: 70px;
+    }
+    .loginText {
+        margin-top: 5%;
+    }
+}
+
+.mat-list-base {
+    margin-top: 5%;
+}
+
+mat-card {
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+    width: 12%;
+    text-align: center;
+    height: auto;
+    background-color: white;
+    font-weight: bold;
+    &:hover {
+        @include hover;
+    }
+}
+
+.upload {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    // mat-card {
+    //     width: 165px;
+    //     margin: 0;
+    // }
+}
+
+.mat-fab {
+    @include backButton
+}
+
+.form {
+    //margin-top: 20px;
+    max-width: 50%;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid $border-color;
+    border-radius: 5px;
+    font-size: larger;
+    input.fileSelect {
+        display: block;
+        margin: 0px auto 10px auto;
+        box-sizing: border-box;
+        align-items: baseline;
+        cursor: pointer;
+        padding: 20px 10px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        width: 100%;
+        &:hover {
+            border: 1px solid black;
+        }
+    }
+    .mat-form-field {
+        margin-right: 20px;
+        display: block;
+        width: 100%;
+    }
+    .mat-card-title {
+        margin-bottom: 20px;
+    }
+    button.submit {
+        width: 100%;
+    }
+}
+

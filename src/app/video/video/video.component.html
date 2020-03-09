@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <!-- Skills display -->
+    <div *ngIf="!flipped">
+        <mat-card *ngFor="let x of videoList; index as i" (click)="nav(x.courseName)">
+            <mat-card-title>{{x.courseName}}</mat-card-title>
+            <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
+        </mat-card>
+    </div>
+    <mat-card-title *ngIf="!currentUser" class="loginText">Please Log In to Upload Videos.</mat-card-title>
+    <!-- Upload video -->
+    <div class="upload" *ngIf="!flipped">
+    <mat-card (click)="flipIt()" class="uploadMatCard" *ngIf="currentUser">
+        <mat-card-title>Add Video</mat-card-title>
+        <img src="/assets/plus.png" mat-card-image alt="skill icon" width="100px">
+    </mat-card>
+    </div>
+
+    <div class="form" *ngIf="flipped">
+        <!-- Back Button -->
+        <button mat-fab color="primary" class="fab-button" (click)="navBack()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <mat-card-title>Select course and video to upload</mat-card-title>
+        <form [formGroup]="uploadForm">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Select Course*</mat-label>
+                    <mat-select formControlName="theCourse">
+                         <mat-option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="uploadForm.controls.theTitle.hasError('required')">
+                        Please select a Course
+                    </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Enter Title*</mat-label>
+                    <input matInput formControlName="theTitle" #theTitle>
+                    <mat-error *ngIf="uploadForm.controls.theTitle.hasError('required')">
+                        Please enter Title
+                    </mat-error>
+            </mat-form-field>
+            <div class="full-width" appearance="outline">
+                <input type="file" class="fileSelect" formControlName="theName" accept="video/*" (change)="onFileChanged($event)" />
+            </div>
+            <mat-label>OR</mat-label>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Enter URL*</mat-label>
+                <input matInput formControlName="theUrl" #theUrl minLength>
+                <mat-error *ngIf="uploadForm.controls.theUrl.hasError('pattern')">
+                    Please enter a YouTube URL
+                </mat-error>
+                <mat-error *ngIf="uploadForm.controls.theUrl.hasError('minLength')">
+                    Incorrect URL
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color='primary' class="submit" [disabled]="uploadForm.invalid || submitted" (click)="onUpload()">Submit</button>
+        </form>
+    </div>
+</div>
+

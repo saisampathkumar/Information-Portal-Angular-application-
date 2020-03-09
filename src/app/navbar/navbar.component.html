@@ -1,0 +1,78 @@
+<mat-toolbar color="primary" #toolbar>
+  <img class="logo" src="assets/img/logo.png" />
+
+  <button mat-button [routerLink]="['/articles']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Articles</span>
+  </button>
+
+  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Assessments</span>
+  </button>
+
+
+
+  <!-- <button mat-button [matMenuTriggerFor]="cardMenu" [routerLink]="['/card/cards']" routerLinkActive="active">
+      <span [style.font-weight]="'lighter'">Flash Cards</span>
+        <mat-menu #cardMenu="matMenu" yPosition="above">
+        <button mat-menu-item [routerLink]="['/card/cards']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Home</span>
+        </button>
+    <button mat-menu-item [routerLink]="['/card/']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Flash Cards catagories</span>
+        </button> -->
+  <!-- <div  [hidden]="currentUser===undefined">
+        <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Add Card</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/card/Angular']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">angular</span>
+        </button>
+      </div>
+    </mat-menu>
+  </button> -->
+<div>
+  <!-- <button mat-button [routerLink]="['card/cards']" routerLinkActive="active">
+        <span [style.font-weight]="'lighter'">Flash Card</span>
+</button>
+</div> -->
+
+  <button mat-button [routerLink]="['/card']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Flash Card</span>
+  </button>
+</div>
+
+
+  <button mat-button [routerLink]="['/video']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Videos</span>
+  </button>
+
+  <button mat-button [routerLink]="['/relatedlinks']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Related Links</span>
+  </button>
+
+  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Profile</span>
+  </button>
+
+  <div class="user_info">
+    <!-- If user is NOT authenticated, show login/sign up links -->
+    <ng-container *ngIf="!isAuthenticated">
+      <small><a [routerLink]="['/logIn']" [style.font-weight]="'lighter'">Log In</a> /
+        <a [routerLink]="['/signUp']" [style.font-weight]="'lighter'">Register</a>
+      </small>
+    </ng-container>
+
+    <!-- If user is authenticated, show user info -->
+    <ng-container *ngIf="isAuthenticated">
+      <small class="user_profile_name">
+        <i class="material-icons">
+          account_circle &nbsp;
+        </i>
+        <a [routerLink]="['/account']" [style.font-weight]="'lighter'">
+          <strong>{{ currentUser.firstName | uppercase }}</strong>
+        </a> &nbsp; | &nbsp;
+        <a [style.font-weight]="'lighter'" (click)="onLogOut()" class="log-out-btn">Log out</a>
+      </small>
+    </ng-container>
+  </div>
+</mat-toolbar>

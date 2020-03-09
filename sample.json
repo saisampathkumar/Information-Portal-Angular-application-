@@ -1,0 +1,125 @@
+{
+  "userdata": [
+    {
+      "id": 1,
+      "username": "username",
+      "password": "password",
+      "type": "provider",
+      "email": "useremail",
+      "passList": [],
+      "flashcard": [
+        {
+          "id": 1,
+          "question": "what is diretive",
+          "ans": "Test ",
+          "body": "content",
+          "pass": "false"
+        }
+      ]
+    }
+  ],
+  "flashcard": [
+    {
+      "id": 1,
+      "question": "what is diretive",
+      "ans": "Testone",
+      "body": "content"
+    },
+    {
+      "id": 2,
+      "username": "rahim",
+      "password": "yoyo",
+      "type": "admin",
+      "email": "rahim",
+      "passList": [],
+      "flashcard": [
+        {
+          "id": 1,
+          "question": "what is diretive",
+          "ans": " ",
+          "body": "content",
+          "pass": "false"
+        }
+      ]
+    },
+    {
+      "question": "",
+      "id": 3,
+      "ans": "Test4",
+      "body": "content"
+    },
+    {
+      "id": 4
+    },
+    {
+      "username": "Bayonne",
+      "password": "fvgbhbg",
+      "firstName": "qards",
+      "lastName": "sards",
+      "email": "rahim@gmail.com",
+      "userType": "default",
+      "id": 6
+    },
+    {
+      "username": "dfsdsf",
+      "password": "sdfds",
+      "firstName": "eer",
+      "lastName": "dfergfv",
+      "email": "rahim@gmail.com",
+      "userType": "admin",
+      "id": 5
+    },
+    {
+      "username": "inherited",
+      "password": {
+        "__zone_symbol__state": null,
+        "__zone_symbol__value": []
+      },
+      "firstName": "Abderrahim12",
+      "lastName": "wdeff",
+      "email": "rahim@gmail.com",
+      "userType": "content provider",
+      "id": 7
+    },
+    {
+      "username": "lamia",
+      "firstName": "Abderrahim",
+      "lastName": "mesai",
+      "email": "this@g.com",
+      "userType": "content provider",
+      "id": 8
+    },
+    {
+      "username": "rahim",
+      "password": "dfdsfsd",
+      "firstName": "mechteml",
+      "lastName": "Belkadi",
+      "email": "rahim@gmail.com",
+      "userType": "content provider",
+      "id": 9
+    },
+    {
+      "username": "Abderrahim",
+      "password": "sdffsdf",
+      "firstName": "lacy",
+      "lastName": "macy",
+      "email": "lamia@gmail.com",
+      "userType": "content provider",
+      "id": 10
+    }
+  ],
+  "flashcard": [
+    {
+      "id": 1,
+      "question": "what is diretive",
+      "ans": " ",
+      "body": "content"
+    },
+    {
+      "id": 2,
+      "question": "what is Angular",
+      "ans": "SPA",
+      "body": "content"
+    }
+  ]
+}

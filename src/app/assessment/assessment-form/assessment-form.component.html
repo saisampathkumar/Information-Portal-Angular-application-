@@ -1,0 +1,39 @@
+<br><br>
+
+<div class="form" *ngIf="courseData">
+    <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+        <h1>{{courseNm['courseName']}}</h1>
+        <h1 *ngIf="score > 0">Your score: {{score}}</h1>
+        <mat-accordion>
+            <mat-expansion-panel [ngClass]="{'correct': userAns[c.id], 'wrong':myForm.submitted && !userAns[c.id] }"
+                *ngFor="let c of courseData">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{c['q']}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                    <div class="radio-group" *ngFor="let op of c.options">
+                        <input class="radio-button" ngModel required type="radio" name={{c.id}} value={{op.opt}}
+                            id=""><label for="{{c.id}}">{{op.opt}}</label>
+                    </div>
+            </mat-expansion-panel>
+            <button matTooltip="Go back" *ngIf="courseData" mat-fab color="primary" class="fab-button"
+                [routerLink]="['/assessment']">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button matTooltip="Check your score" matTooltipPosition="right" class="submitButton"
+                (click)="showalert = !showalert" type="submit" 
+                [disabled]="myForm.invalid"
+                mat-raised-button data-modal="#modal1">Submit</button>
+        </mat-accordion>
+    </form>
+    </div>
+
+    <app-alert [(visible)]="showalert">
+
+        <h1 *ngIf="this.score >= 3">Congratulations you have passed your score: {{score}}</h1>
+
+        <h1 *ngIf="this.score < 3">Your score: {{score}}</h1>
+
+        <button class="closebutton" mat-raised-button (click)="showalert = !showalert" class="btn">Close</button>
+    </app-alert>

@@ -1,0 +1,44 @@
+body {
+    background: #F17563;
+    font-family: Open Sans;
+    font-size: 50px;
+  	color: #222;
+}
+
+.player {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    .player div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: red;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .player .back {
+        background: yellow;
+        color:black;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+// input {
+//     display: none;
+// }
+
+.player.voted {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
